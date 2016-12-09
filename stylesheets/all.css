@@ -370,9 +370,6 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-form {
-  padding: 2em; }
-
 /* ------------------------------------------------------------------------ *
  * VARIABLES
  * ------------------------------------------------------------------------ */
@@ -396,10 +393,13 @@ th {
   font-weight: 600;
   letter-spacing: 0.05em; }
 
-li {
+.directions, li {
   font-size: 1.2em;
   font-weight: 400;
   letter-spacing: 0.05em; }
+
+.directions {
+  font-style: italic; }
 
 h1 {
   font-size: 4em;
@@ -410,12 +410,13 @@ h1 {
 
 h2 {
   font-size: 2.4em;
-  margin: 1em 0 1em;
+  color: #fe4365;
+  margin: 0.5em 0 0.5em;
   padding: 0; }
 
 h3 {
   font-size: 1.8em;
-  margin: 0.5em 0;
+  margin: 0.5em 1.25em;
   padding: 0; }
 
 p {
@@ -439,9 +440,6 @@ main {
     content: "";
     display: table;
     clear: both; }
-
-section {
-  margin: 5em 0; }
 
 h1 {
   color: white;
@@ -497,7 +495,6 @@ button {
   border: 1px solid #fe4365;
   cursor: pointer;
   outline: none;
-  margin: 0;
   padding: 1em; }
   input[type="submit"]:hover,
   button:hover {
@@ -505,24 +502,48 @@ button {
     background: white;
     border: 1px solid #fe4365; }
 
+.jfk-button {
+  margin: 1.5em; }
+
 /* ------------------------------------------------------------------------ *
  * SHARED CONTENT STYLES
  * ------------------------------------------------------------------------ */
 /**
 * Section Styles
 */
+section {
+  margin: 1em 0; }
+
+section > header,
+section:not(#markets) > .content {
+  padding: 2em; }
+
+.directions {
+  border-left: 4px solid #fec979;
+  padding-left: .5em; }
+
+.info-container {
+  display: none; }
+
 /**
 * Errors
 */
 #error-container {
-  padding: 2em; }
+  display: none;
+  padding: 2em;
+  background: #fec979;
+  color: white;
+  list-style: circle;
+  list-style-position: inside; }
 
-/* ------------------------------------------------------------------------ *
- * INDIVIDUAL CONTENT STYLES
- * ------------------------------------------------------------------------ */
 /**
-* Tables
+* Table
 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2em; }
+
 th {
   width: 30%;
   text-align: left;
@@ -536,11 +557,6 @@ td.clear {
     font-size: 0.5em;
     color: black; }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 12px; }
-
 table tr,
 table td {
   border: 1px solid #e0e0e0; }
@@ -548,6 +564,9 @@ table td {
 table td.ss-scalerow {
   width: 3%; }
 
+/* ------------------------------------------------------------------------ *
+ * INDIVIDUAL CONTENT STYLES
+ * ------------------------------------------------------------------------ */
 /**
 * Priority Point Selector
 */
@@ -596,7 +615,8 @@ section#technology > span {
 */
 ul.ss-choices {
   width: auto;
-  border-top: 1px solid #e0e0e0; }
+  border-top: 1px solid #e0e0e0;
+  margin-bottom: 4em; }
 
 li.ss-choice-item {
   display: block;
@@ -618,7 +638,7 @@ li.ss-choice-item {
     zoom: 1.5;
     background-color: white;
     margin: 0;
-    padding: 0.5em; }
+    padding: 0.5em 1.25em; }
   li.ss-choice-item input[type="checkbox"]:checked + span {
     background-color: #fe4365;
     color: white; }

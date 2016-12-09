@@ -3,7 +3,6 @@ $(function() {
 // Variables
 var totalPoints           = 3;
 var totalChoices          = 1;
-var $counter              = $('#remaining-points');
 
 var $pointElements        = $('input[type=radio].ss-q-radio');
 var $pointGroups          = $('.ss-radio-group');
@@ -59,7 +58,6 @@ function managePointCount() {
   });
   remainingPoints = totalPoints - currentPoints
 
-  $counter.html(remainingPoints);
   return remainingPoints;
 }
 
@@ -116,7 +114,7 @@ function manageValidation() {
       }
     },
     wrapper : "li",
-    errorPlacement: function(error,element) { $errorContainer.append(error); }
+    errorPlacement: function(error,element) { $errorContainer.append(error); $errorContainer.show(); }
   });
 }
 

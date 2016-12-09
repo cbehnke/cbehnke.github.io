@@ -1,18 +1,23 @@
 /*
-Error: Undefined mixin 'pad'.
-        on line 1 of /Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss, in `pad'
-        from line 1 of /Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss
+Error: Undefined mixin 'outer-container'.
+        on line 62 of /Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss, in `outer-container'
+        from line 62 of /Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss
 
-1: form { @include pad(2em); }
-2: /* ------------------------------------------------------------------------ *
-3:  * VARIABLES
-4:  * ------------------------------------------------------------------------ *\/
-5: 
-6: $colorPrimary:  #fe4365;
+57: /* ------------------------------------------------------------------------ *
+58:  * BASE APPLICATION STYLES
+59:  * ------------------------------------------------------------------------ *\/
+60: 
+61: body { background: $darkOutline; }
+62: main { @include outer-container(600px); background: white; }
+63: 
+64: h1 {
+65:   color: white;
+66:   background: $colorPrimary
+67: }
 
 Backtrace:
-/Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss:1:in `pad'
-/Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss:1
+/Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss:62:in `outer-container'
+/Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss:62
 /Users/chad.behnke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /Users/chad.behnke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
 /Users/chad.behnke/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
@@ -152,4 +157,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'pad'.\A         on line 1 of /Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss, in `pad'\A         from line 1 of /Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss\A \A 1: form { @include pad(2em); }\A 2: /* ------------------------------------------------------------------------ *\A 3:  * VARIABLES\A 4:  * ------------------------------------------------------------------------ */\A 5: \A 6: $colorPrimary:  #fe4365;"; }
+  content: "Error: Undefined mixin 'outer-container'.\A         on line 62 of /Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss, in `outer-container'\A         from line 62 of /Users/chad.behnke/code/middleman/product-priorities-form/source/stylesheets/site.scss\A \A 57: /* ------------------------------------------------------------------------ *\A 58:  * BASE APPLICATION STYLES\A 59:  * ------------------------------------------------------------------------ */\A 60: \A 61: body { background: $darkOutline; }\A 62: main { @include outer-container(600px); background: white; }\A 63: \A 64: h1 {\A 65:   color: white;\A 66:   background: $colorPrimary\A 67: }"; }

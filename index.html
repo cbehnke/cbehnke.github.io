@@ -35,7 +35,8 @@
     <h2>Your Info</h2>
   </header>
 
-    <div class="ss-form-question errorbox-good" role="listitem">
+  <div class="content">
+      <div class="ss-form-question errorbox-good" role="listitem">
     <label class="ss-q-item-label" for="entry_1997014609">Name</label>
     <input type="text" name="entry.1997014609" value="" class="ss-q-short valid" id="entry_1997014609" dir="auto" aria-label="Name" title="">
   </div>
@@ -44,6 +45,7 @@
     <input type="text" name="entry.652512327" value="" class="ss-q-short valid" id="entry_652512327" dir="auto" aria-label="Department" title="">
   </div>
 
+  </div>
 </section>
 
 <!-- Sections -->
@@ -51,11 +53,12 @@
   <header>
     <h2>Technology</h2>
     <p>Invest in efforts that include building out upgrades to our existing technology, giving greater empowerment to our current customers and employees</p>
+    <span class="directions">Select <strong>3</strong> technology investment boxes</span>
   </header>
   
-  <span>Remaining Points: <span id="remaining-points"></span></span>
+  <div class="content">
 
-  <table border="0" cellpadding="0" cellspacing="0" id="entry_1495175175">
+      <table border="0" cellpadding="0" cellspacing="0" id="entry_1495175175">
   <tr role="radiogroup" aria-label="Channels" class="ss-radio-group">
     <th>Channels</th>
 
@@ -76,7 +79,7 @@
   </tr>
 </table>
 
-  <table border="0" cellpadding="0" cellspacing="0" id="entry_532568379">
+      <table border="0" cellpadding="0" cellspacing="0" id="entry_532568379">
   <tr role="radiogroup" aria-label="CRM" class="ss-radio-group">
     <th>CRM</th>
 
@@ -97,7 +100,7 @@
   </tr>
 </table>
 
-  <table border="0" cellpadding="0" cellspacing="0" id="entry_428125220">
+      <table border="0" cellpadding="0" cellspacing="0" id="entry_428125220">
   <tr role="radiogroup" aria-label="Transactional" class="ss-radio-group">
     <th>Transactional</th>
 
@@ -118,7 +121,7 @@
   </tr>
 </table>
 
-  <table border="0" cellpadding="0" cellspacing="0" id="entry_2038362251">
+      <table border="0" cellpadding="0" cellspacing="0" id="entry_2038362251">
   <tr role="radiogroup" aria-label="API/Integration" class="ss-radio-group">
     <th>API/Integration</th>
 
@@ -139,7 +142,7 @@
   </tr>
 </table>
 
-  <table border="0" cellpadding="0" cellspacing="0" id="entry_133274514">
+      <table border="0" cellpadding="0" cellspacing="0" id="entry_133274514">
   <tr role="radiogroup" aria-label="Catapult Usability" class="ss-radio-group">
     <th>Catapult Usability</th>
 
@@ -160,15 +163,18 @@
   </tr>
 </table>
 
+  </div>
 </section>
 
 <section id="markets">
   <header>
     <h2>Markets</h2>
     <p>Take our technology and apply it to new markets and expand on our current technology to sell to a larger portion of current markets</p>
+    <span class="directions">Select <strong>2</strong> options in each category</span>
   </header>
 
-  <div class="ss-form-question errorbox-good" role="listitem">
+  <div class="content">
+    <div class="ss-form-question errorbox-good" role="listitem">
   <div dir="auto" class="ss-item ss-item-required ss-checkbox">
     <div class="ss-form-entry">
       <h3>International</h3>
@@ -207,7 +213,7 @@
   </div>
 </div>
 
-  <div class="ss-form-question errorbox-good" role="listitem">
+    <div class="ss-form-question errorbox-good" role="listitem">
   <div dir="auto" class="ss-item ss-item-required ss-checkbox">
     <div class="ss-form-entry">
       <h3>Verticals</h3>
@@ -263,15 +269,18 @@
     </div>
   </div>
 </div>
+  </div>
 </section>
 <section id="usability">
   <header>
     <h2>Self/Full Serve</h2>
-    <p>Which one do you want more of??</p>
+    <p>Decide whether to make product and technology investments in increasing ease-of-use, or in adding new and more powerful functionality</p>
+    <span class="directions">Select the type of investment by sliding the scale</span>
   </header>
 
-  <div class="ss-form-question errorbox-good" role="listitem">
-  <div dir="auto" class="ss-item ss-item-required ss-checkbox">
+  <div class="content">
+    <div class="ss-form-question errorbox-good" role="listitem">
+  <div dir="auto" class="ss-item ss-item-required ss-range">
     <div class="ss-form-entry">
 
       <input id="entry_1727813892" type="range" min="1" max="5" step="1" /> 
@@ -291,6 +300,17 @@
     </div>
   </div>
 </div>
+
+    <div class="info-container">
+      <div id="info_ease-of-use">
+        <p>"Ease of Use" means a focus on making features quick and easy to setup while incorporate the mobile expertise and best practices offered by Vibes. This would be accomplished by offering "tried and true" campaign flows including built in compliance language. As a result, the opportunity for setup error and possibility of having non-compliant campaigns would be minimized. This will also make it harder to customize campaigns to specific user flows or to match how a customer had their campaign setup at their last vendor.</p>
+      </div>
+
+      <div id="info-power">
+        <p>"Powerful" means a focus on more customizable features that would rely more on the expertise of the user to achieve success. The platform would more of a collection of features that the user could combine to create the the desired mobile experience. Compliance and best practices would be offered as suggestions through the platform or advised from Vibes mobile experts. This will also make it easier for the user to "shoot themselves in the foot" as the flexibility will allow more errors in setup or missing compliance language.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Final Comments -->
@@ -299,9 +319,11 @@
     <h2>Additional Comments</h2>
   </header>
 
-  <div class="ss-form-question errorbox-good" role="listitem">
-    <textarea name="entry.886560810" rows="8" cols="0" class="ss-q-long valid" id="entry_886560810" dir="auto" aria-label="Comments  "></textarea>
-    <div class="error-message" id="1547586224_errorMessage"></div>
+  <div class="content">
+    <div class="ss-form-question errorbox-good ss-textarea" role="listitem">
+      <textarea name="entry.886560810" rows="8" cols="0" class="ss-q-long valid" id="entry_886560810" dir="auto" aria-label="Comments  "></textarea>
+      <div class="error-message" id="1547586224_errorMessage"></div>
+    </div>
   </div>
 </section>
 
