@@ -7,7 +7,7 @@ $(function() {
 
 // Variables
 var totalPoints           = 3;
-var totalChoices          = 2;
+var totalChoices          = 1;
 var $counter              = $('#remaining-points');
 
 var $pointElements        = $('input[type=radio].ss-q-radio');

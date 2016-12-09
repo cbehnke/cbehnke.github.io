@@ -30,24 +30,29 @@
 <ul id="error-container"></ul>
 
 <!-- Responder Info -->
-<section id="user-info">
-  <div class="ss-form-question errorbox-good" role="listitem">
-    <label class="ss-q-item-label" for="entry_1997014609">Name</label>
-    <input type="text" name="entry.1997014609" value="" class="ss-q-short valid" id="entry_1997014609" dir="auto" aria-label="Name  " title="">
-    <div class="error-message" id="1191369431_errorMessage"></div>
-  </div>
+<section id="responder">
+  <header>
+    <h2>Your Info</h2>
+  </header>
 
+    <div class="ss-form-question errorbox-good" role="listitem">
+    <label class="ss-q-item-label" for="entry_1997014609">Name</label>
+    <input type="text" name="entry.1997014609" value="" class="ss-q-short valid" id="entry_1997014609" dir="auto" aria-label="Name" title="">
+  </div>
   <div class="ss-form-question errorbox-good" role="listitem">
     <label class="ss-q-item-label" for="entry_652512327">Department</label>
-    <input type="text" name="entry.652512327" value="" class="ss-q-short" id="entry_652512327" dir="auto" aria-label="Department  " title="">
-    <div class="error-message" id="1258433672_errorMessage"></div>
+    <input type="text" name="entry.652512327" value="" class="ss-q-short valid" id="entry_652512327" dir="auto" aria-label="Department" title="">
   </div>
+
 </section>
 
 <!-- Sections -->
 <section id="technology">
-  <h2>Technology</h2>
-  <p>Invest in efforts that include building out upgrades to our existing technology, giving greater empowerment to our current customers and employees</p>
+  <header>
+    <h2>Technology</h2>
+    <p>Invest in efforts that include building out upgrades to our existing technology, giving greater empowerment to our current customers and employees</p>
+  </header>
+  
   <span>Remaining Points: <span id="remaining-points"></span></span>
 
   <table border="0" cellpadding="0" cellspacing="0" id="entry_1495175175">
@@ -158,8 +163,10 @@
 </section>
 
 <section id="markets">
-  <h2>Markets</h2>
-  <p>Take our technology and apply it to new markets and expand on our current technology to sell to a larger portion of current markets</p>
+  <header>
+    <h2>Markets</h2>
+    <p>Take our technology and apply it to new markets and expand on our current technology to sell to a larger portion of current markets</p>
+  </header>
 
   <div class="ss-form-question errorbox-good" role="listitem">
   <div dir="auto" class="ss-item ss-item-required ss-checkbox">
@@ -208,8 +215,8 @@
       <ul class="ss-choices" role="group" aria-label="International  Must select exactly 2 options.">
           <li class="ss-choice-item">
             <label>
-              <input type="checkbox" name="entry.515772466" value="Publisher" id="group_515772466_1" role="checkbox" class="ss-q-checkbox" aria-required="true">
-              <span class="ss-choice-label">Publisher</span>
+              <input type="checkbox" name="entry.515772466" value="Insurance" id="group_515772466_1" role="checkbox" class="ss-q-checkbox" aria-required="true">
+              <span class="ss-choice-label">Insurance</span>
             </label>
           </li>
           <li class="ss-choice-item">
@@ -236,6 +243,12 @@
               <span class="ss-choice-label">Gyms</span>
             </label>
           </li>
+          <li class="ss-choice-item">
+            <label>
+              <input type="checkbox" name="entry.515772466" value="CPG" id="group_515772466_6" role="checkbox" class="ss-q-checkbox" aria-required="true">
+              <span class="ss-choice-label">CPG</span>
+            </label>
+          </li>
 
         <li class="ss-choice-item">
           <label>
@@ -251,12 +264,21 @@
   </div>
 </div>
 </section>
-<div class="ss-form-question errorbox-good" role="listitem">
+<section id="usability">
+  <header>
+    <h2>Self/Full Serve</h2>
+    <p>Which one do you want more of??</p>
+  </header>
+
+  <div class="ss-form-question errorbox-good" role="listitem">
   <div dir="auto" class="ss-item ss-item-required ss-checkbox">
     <div class="ss-form-entry">
-      <h3>Self/Full-Service</h3>
 
       <input id="entry_1727813892" type="range" min="1" max="5" step="1" /> 
+      <ul class="label-container">
+        <li>Easy to Use</li>
+        <li>Powerful</li>
+      </ul>
 
       <ul class="ss-rangechoices">
           <li><input type="radio" name="entry.1727813892" value="1" id="group_1727813892_1" role="radio" class="ss-range-choice valid" aria-label="1"></li>
@@ -269,11 +291,15 @@
     </div>
   </div>
 </div>
+</section>
 
 <!-- Final Comments -->
 <section id="comments">
+  <header>
+    <h2>Additional Comments</h2>
+  </header>
+
   <div class="ss-form-question errorbox-good" role="listitem">
-    <label class="ss-q-item-label" for="entry_886560810">Comments</label>
     <textarea name="entry.886560810" rows="8" cols="0" class="ss-q-long valid" id="entry_886560810" dir="auto" aria-label="Comments  "></textarea>
     <div class="error-message" id="1547586224_errorMessage"></div>
   </div>

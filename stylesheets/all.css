@@ -370,6 +370,9 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+form {
+  padding: 2em; }
+
 /* ------------------------------------------------------------------------ *
  * VARIABLES
  * ------------------------------------------------------------------------ */
@@ -432,10 +435,10 @@ main {
   margin-left: auto;
   margin-right: auto;
   background: white; }
-  main::after {
-    clear: both;
+  main:after {
     content: "";
-    display: block; }
+    display: table;
+    clear: both; }
 
 section {
   margin: 5em 0; }
@@ -456,9 +459,6 @@ li {
 /* ------------------------------------------------------------------------ *
  * BASE FORM STYLES
  * ------------------------------------------------------------------------ */
-form {
-  padding: 2em; }
-
 form > section:first-child {
   margin-top: 0; }
 
@@ -506,7 +506,19 @@ button {
     border: 1px solid #fe4365; }
 
 /* ------------------------------------------------------------------------ *
- * CONTENT STYLES
+ * SHARED CONTENT STYLES
+ * ------------------------------------------------------------------------ */
+/**
+* Section Styles
+*/
+/**
+* Errors
+*/
+#error-container {
+  padding: 2em; }
+
+/* ------------------------------------------------------------------------ *
+ * INDIVIDUAL CONTENT STYLES
  * ------------------------------------------------------------------------ */
 /**
 * Tables
@@ -630,48 +642,31 @@ input[type=range] {
 input[type=range]:focus {
   outline: none; }
 
+ul.label-container:after {
+  content: "";
+  display: table;
+  clear: both; }
+ul.label-container li:first-child {
+  float: left; }
+ul.label-container li:last-child {
+  float: right; }
+
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101; }
-
-input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -14px; }
+  background: rgba(224, 224, 224, 0.3); }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #367ebd; }
+  background: #e0e0e0; }
 
 input[type=range]::-moz-range-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101; }
-
-input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer; }
+  background: rgba(224, 224, 224, 0.3); }
 
 input[type=range]::-ms-track {
   width: 100%;
@@ -683,29 +678,37 @@ input[type=range]::-ms-track {
   border-width: 16px 0;
   color: transparent; }
 
-input[type=range]::-ms-fill-lower {
-  background: #2a6495;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; }
-
-input[type=range]::-ms-fill-upper {
-  background: #3071a9;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; }
-
-input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
+input[type=range]::-webkit-slider-thumb {
   height: 36px;
   width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
+  border-radius: 1px;
+  background: #fe4365;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px; }
+
+input[type=range]::-moz-range-thumb {
+  height: 36px;
+  width: 16px;
+  border-radius: 1px;
+  background: #fe4365;
   cursor: pointer; }
 
+input[type=range]::-ms-thumb {
+  height: 36px;
+  width: 16px;
+  border-radius: 1px;
+  background: #fe4365;
+  cursor: pointer; }
+
+input[type=range]::-ms-fill-lower {
+  background: #fe4365; }
+
+input[type=range]::-ms-fill-upper {
+  background: #fe4365; }
+
 input[type=range]:focus::-ms-fill-lower {
-  background: #3071a9; }
+  background: #e0e0e0; }
 
 input[type=range]:focus::-ms-fill-upper {
-  background: #367ebd; }
+  background: #e0e0e0; }
