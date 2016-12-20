@@ -520,7 +520,8 @@ section:not(#markets) > .content {
 
 .directions {
   border-left: 4px solid #fec979;
-  padding-left: .5em; }
+  padding-left: .5em;
+  margin: 0; }
 
 .info-container {
   display: none; }
